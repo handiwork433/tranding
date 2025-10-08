@@ -1,0 +1,20 @@
+[project]
+name = "trading-engine"
+version = "0.1.0"
+description = "Async trading engine for Binance automation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.26",
+    "python-binance>=1.0.19",
+    "pydantic-settings>=2.2",
+    "sqlalchemy>=2.0",
+    "trading-gateway @ file://../gateway",
+]
+
+[project.scripts]
+trading-engine = "trading_engine.main:run"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
